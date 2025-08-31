@@ -37,7 +37,7 @@ public class EmailService {
     public void sendUserDeletedNotification(User user) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setFrom("warfaceri337@mail.ru");
+            message.setFrom(username);
             message.setTo(user.getEmail());
             message.setSubject("Прощайте!");
             message.setText("Здравствуйте! Ваш аккаунт на сайте был удален.\n");
