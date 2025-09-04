@@ -34,11 +34,11 @@ public class EmailService {
         }
     }
 
-    public void sendUserDeletedNotification(User user) {
+    public void sendUserDeletedNotification(String email) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom(username);
-            message.setTo(user.getEmail());
+            message.setTo(email);
             message.setSubject("Прощайте!");
             message.setText("Здравствуйте! Ваш аккаунт на сайте был удален.\n");
             mailSender.send(message);

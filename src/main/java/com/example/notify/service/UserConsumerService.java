@@ -21,6 +21,6 @@ public class UserConsumerService {
 
     @KafkaListener(topics = "deleted-users")
     public void consumeDeletedUser(ConsumerRecord<String, User> record) {
-        emailService.sendUserDeletedNotification(record.value());
+        emailService.sendUserDeletedNotification(record.value().getEmail());
     }
 }
