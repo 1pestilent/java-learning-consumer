@@ -16,6 +16,6 @@ COPY --from=build /app/target/*.jar app.jar
 RUN addgroup --system springboot && adduser --system --group springboot
 USER springboot
 
-EXPOSE 8081
+EXPOSE 8082
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
